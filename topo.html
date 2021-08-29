@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Final</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Newsletters</a></li>
+                <li></li>
+                <li><a href="#">Área do candidato</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="bar">
+        <div class="inscricao">
+            
+            
+            <h1>Faça sua Inscrição</h1>
+            <form name="cadastro">
+
+                <h1>Dados Profissionais</h1>
+                <input type="text" class="" name="profissao" placeholder="Profissão" required /> <br />
+                <input type="text" class="" name="Cargo Pretendido" placeholder="Cargo Pretendido" /> <br />
+                
+                <h1>Dados Pessoais</h1>
+                <input type="text" class="" name="nome" placeholder="Nome Completo" required /> <br />
+                <input type="text" onfocus="(this.type='date')" class="" name="aniversario" placeholder="Data de Nascimento"  required/> <br />
+                <span>
+                    <label for="estadoCivil">Estado Civil:</label>
+                    <select name="estadoCivil" id="estadoCivil">
+                        <option value="solteiro">Solteiro(a)</option>
+                        <option value="casado">Casado(a)</option>
+                        <option value="divorciado">Divorciado(a)</option>
+                    </select>
+                </span><br />
+                <input type="text" class="" name="Identidade" placeholder="Identidade" /> <br />
+                <input type="text" class="" name="CPF" placeholder="CPF" /> <br />
+                <span>
+                    <label for="Sexo">Sexo:</label>
+                    <select name="">
+                        <option value="feminino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="0">Não declarado</option>
+                    </select> 
+                </span><br />
+
+                <h1>Dados de mobilidade</h1>
+                
+                <span>
+                    <label for="possuiVeiculo">Possui Veículo?</label>
+                    <select name="">
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select> <br />
+                </span> <br />
+                
+                <span>
+                    <label for="Possui Habilitação">Possui Habilitação?</label>
+                    <select name="">
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select> 
+                </span> <br />
+
+                <h1>Dados residenciais</h1>
+                <input type="text" class="" name="CEP" placeholder="CEP" required /> <br />
+                <input type="text" class="cep" name="bairro" placeholder="Bairro"  disabled /> <br class="cep" />
+                <input type="text" class="cep" name="logradouro" placeholder="Endereço"  disabled /> <br  class="cep" />
+                <input type="text" class="cep" name="localidade" placeholder="Cidade"  disabled /> <br  class="cep" />
+                <input type="text" class="cep" name="uf" placeholder="UF"  disabled /> <br  class="cep" />
+                <h1>Dados de contato</h1>
+                <input type="text" class="" name="Telefone Fixo 1" placeholder="Telefone Fixo 1" /> <br />
+                <input type="text" class="" name="Telefone Fixo 2" placeholder="Telefone Fixo 2" /> <br />
+                <input type="text" class="" name="celular" placeholder="Celular" required /> <br />
+                <input type="text" class="" name="contato" placeholder="Contato" /> <br />
+                <input type="email" class="" name="e-mail" placeholder="e-mail" required /> <br />
+                <button type="submit">Enviar</button>
+            </form>
+
+        </div>
+        <div>
+            <img src="./images/search.jpg">
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+
+.navbar > nav > ul {
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+    /* border: 1px dashed black; */
+    background: #007dfe;
+    height: 46px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar > nav > ul > li {
+    flex-basis: 220px;
+    /* border: 1px red solid; */
+    text-align: center;
+}
+
+.navbar > nav > ul > li > a:link, a:visited, a:active {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.navbar > nav > ul > li:nth-child(3) {
+    /* border: 1px blue solid; */
+    flex-grow: 2;
+}
+
+.bar {
+    /* border: deeppink 1px dotted; */
+    display: flex;
+    flex-direction: row;
+}
+
+.bar > div {
+    /* border: 1px solid green; */
+    flex-basis: 50%;
+}
+
+.bar > div.inscricao > h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.bar > div.inscricao > form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    align-items: center;
+}
+
+.bar > div.inscricao > form > h1 {
+    font-weight: 600;
+    margin: 20px auto 10px auto;
+    padding: 8px;
+    border-bottom: 1px dotted black;
+}
+
+.cep {
+    display: none;
+}
