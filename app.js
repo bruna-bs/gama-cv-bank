@@ -20,7 +20,7 @@ function handleCepFields(boolean) {
 }
 
 function searchCep(cep) {
-    fetch(`https://cors-anywhere.herokuapp.com/http://viacep.com.br/ws/${cep}/json/`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://viacep.com.br/ws/${cep}/json/`)
     .then(function(response) {
         const responseJson = response.json();
         console.log('response 1:\n', responseJson)
