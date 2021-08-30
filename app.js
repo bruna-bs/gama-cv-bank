@@ -81,7 +81,8 @@ form.addEventListener('submit', function(event) {
         "CEP",
         "celular",
         "e-mail",
-        "contato"
+        "contato",
+        "houseNumber"
     ]
 
     if(!validation(validate)) {
