@@ -26,7 +26,6 @@ function searchCep(cep) {
     })
     .then(data => {
         const CepArray = Object.entries(data)
-        console.log('CepArray:\n', CepArray)
         CepArray.forEach(([key, value]) => {
             let input = document.querySelector(`input[name="${key}"]`)
             if (input) input.value = value;
@@ -36,7 +35,7 @@ function searchCep(cep) {
         
     })
     .catch(err => {
-        console.log('deu pau', new Error(err))
+        console.error('error: \n', new Error(err))
         inputCep.style.borderColor = 'red';
         handleCepFields(false)
     })
@@ -51,15 +50,12 @@ function validation(array) {
             handleSubmit(false)
         }
 
-        if(!Boolean(input.value)) { 
-            // handleSubmit(false) //
+        if(!Boolean(input.value)) {
             input.style.borderColor = 'red';
             errors.push(name)
             handleSubmit(false)
         }
         
-        // console.log(`passou`)
-        // console.log(input.value)
         handleSubmit(true)
     })
     
@@ -90,30 +86,13 @@ form.addEventListener('submit', function(event) {
 
     if(!validation(validate)) {
         console.log('Não pasosu na validação')
-        // handleSubmit(false)
         return false
     }
 
     console.log('Passou na validação')
-    
 
 })
 
 inputCep.addEventListener('change', function(event) {
     searchCep(event.target.value)
 })
-
-/** 
- * @todo: validar:
- * CPF,
- *  Nome,
- *  Data Nascimento,
- *  Cep,
- *  Logradouro,
- *  Número,
- *  Bairro,
- *  Cidade,
- *  Email,
- *  Profissão
- * e Celular
- */
