@@ -22,11 +22,13 @@ function handleCepFields(boolean) {
 function searchCep(cep) {
     fetch(`https://cors-anywhere.herokuapp.com/http://viacep.com.br/ws/${cep}/json/`)
     .then(function(response) {
-        return response.json();
+        const response = response.json();
+        console.log('response 1:\n', response)
+        return response
     })
     .then(data => {
-        const CepArray = Object.entries(data)  
-        
+        const CepArray = Object.entries(data)
+        console.log('CepArray:\n', CepArray)
         CepArray.forEach(([key, value]) => {
             let input = document.querySelector(`input[name="${key}"]`)
             if (input) input.value = value;
